@@ -5,7 +5,7 @@ document.getElementById('formProducto').addEventListener('submit', async (e) => 
 
     const nombre_prod = document.getElementById('nombre_prod').value;
     const stock = document.getElementById('stock').value;
-    const precio = document.getElementById('precio').value;
+    const precio = document.getElementById('valor').value;
 
     try {
     const respuesta_prod = await fetch(API_URL_PROD, {
@@ -42,7 +42,7 @@ async function cargarProductos() {
             <td>${produto.id}</td>
             <td>${produto.nombre_prod}</td>
             <td>${produto.stock}</td>
-            <td>${produto.precio}</td>
+            <td>${produto.valor}</td>
         </tr>
         `;
     });
